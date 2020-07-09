@@ -11,6 +11,7 @@
   "dependencies": {
     "bunyan": "^1.8.14",
     "express": "^4.17.1",
+    "semver": "^7.3.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
   }

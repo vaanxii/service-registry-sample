@@ -2,11 +2,11 @@
 
 const http = require('http');
 
-const config = require('../config')[process.env.NODE_ENV] || 'development'];
+const config = require('../config')[process.env.NODE_ENV || 'development'];
 
 const log = config.log();
 
-cost service = require('../server/service')(config);
+const service = require('../server/service')(config);
 
 const server = http.createServer(service);
 
@@ -15,5 +15,10 @@ server.listen(process.env.PORT || 3000);
 
 server.on('listening', () => {
     log.info(`Hi there! I'm listening on port ${server.address().port}
-    in  ${service.get('env')}`);
+    in `);
+
+    //log.info(`Hi there! I'm listening on port ${server.address().port}
+    //in  ${server.get('env')}`);
+    console.log(`Hi there! I'm listening on port ${server.address().port}
+    in `);
 });

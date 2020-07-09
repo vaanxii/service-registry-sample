@@ -8,7 +8,11 @@ const { name, version } = pjs;
 
 // Set up a logger
 const getLogger = (serviceName, serviceVersion, level) =>
-  bunyan.createLogger({});
+  bunyan.createLogger({
+    name: serviceName,
+    version: serviceVersion,
+    level: level,
+  });
 
 // Configuration options for different environments
 module.exports = {
