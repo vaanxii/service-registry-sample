@@ -18,7 +18,7 @@ server.on('listening', () => {
     in `);
 
     //log.info(`Hi there! I'm listening on port ${server.address().port}
-    //in  ${server.get('env')}`);
+    //in  ${service.get('env')}`);
     console.log(`Hi there! I'm listening on port ${server.address().port}
     in `);
 });

@@ -2,17 +2,22 @@
   "name": "service-registry",
   "version": "1.0.0",
   "description": "Service registry that holds information of all available or registered services.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bin/run | bunyan",
+    "test": "npx mocha --exit --recursive test/",
+    "orig-test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jerameel Resco",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "bunyan": "^1.8.14",
     "express": "^4.17.1",
     "semver": "^7.3.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
   }
 }
